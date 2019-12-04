@@ -16,6 +16,7 @@ export class AllMovieDetailsComponent implements OnInit {
       const id = params['movieID'];
       this.allMovieService.getMovie(id).subscribe(data => {
         this.movie = data;
+        console.log(data);
       });
     });
   }
