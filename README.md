@@ -1,12 +1,10 @@
 # Moviepedia
 List of movies their actor/actress
-
 # Screenshot 
 ![moviesList](/assets/1.PNG)
 ![movieDeatil](/assets/2.PNG)
 ![people](/assets/3.PNG)
 ![peopleBio](/assets/4.PNG)
-
 ### Technologies Used :
   * Angular-JS
   * GitHub API
@@ -14,13 +12,12 @@ List of movies their actor/actress
 ### How to Run Locally :
 1. Clone the Repository
      `git clone https://github.com/NJACKWinterOfCode/Moviepedia.git`
-2. cd into Ravenous
+2. cd into Moviepedia
       `cd Moviepedia`
 3.  Install angular cli      
       ` npm install - g @angular/cli` 
 4. Start Local Server      
       `ng serve -o --poll=2000`
-
 ### Contributing
  1. Fork the repository.
 ![image](https://user-images.githubusercontent.com/41269164/70219309-9a3eca80-176a-11ea-8a4d-1bd701d07314.png)
