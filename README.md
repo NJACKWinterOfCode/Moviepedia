@@ -18,11 +18,7 @@ List of movies their actor/actress
       `cd Moviepedia`
 3.  Install angular cli      
       ` npm install - g @angular/cli` 
-4. Create new project by command  
-	`ng new myNewApp`
-5. Go to project directory
-	`cd myNewApp`
-6. Start Local Server      
+4. Start Local Server      
       `ng serve -o --poll=2000`
 
 ### Contributing
