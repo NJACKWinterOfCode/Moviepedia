@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="">Moviepedia</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
@@ -10,4 +10,32 @@
       <a style="cursor: pointer;" (click)="onSaveData()" class="nav-link">Save Data</a>
       <a style="cursor: pointer;" (click)="onFetchData()" class="nav-link">Fetch Data</a>
   </ul>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="" style="font-size: 30px;"><span style="color: coral;">Movie</span>pedia</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active mr-3">
+        <a class="nav-link" routerLink="/people" style="font-size: 19px;">Actor/Actress</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" routerLink="/movies" style="font-size: 19px;">Movie</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a  style="cursor: pointer;" (click)="onSaveData()" class="nav-link" style="font-size: 19px;">Save Data</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a style="cursor: pointer;" (click)="onSaveData()" class="nav-link" style="font-size: 19px;">Fetch Data</a>
+      </li>
+    </ul>
+    <form class="form-inline my-3 float-right" action="/action_page.php">
+      <input class="form-control mr-sm-2" [(ngModel)]="movie" name="movie" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-success my-2 my-sm-0" (click)="searchMovies()" type="submit">Search</button>
+    </form>
+  </div>
 </nav>

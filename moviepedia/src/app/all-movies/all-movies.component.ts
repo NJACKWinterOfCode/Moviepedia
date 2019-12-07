@@ -16,6 +16,14 @@ export class AllMoviesComponent implements OnInit {
   search_result: any;
 
   constructor(public allMovieService: AllMoviesService) {
+    this.allMovieService.missionAnnounced$.subscribe((res)=>
+    {
+      console.log(res);
+      this.search_result=res;
+    },(err)=>
+    {
+      console.log(err);
+    })
 
     this.allMovieService.getUpcomingMovies().subscribe(data => {
       this.upcoming_movies = data['results'];
@@ -28,9 +36,9 @@ export class AllMoviesComponent implements OnInit {
   }
 
   searchMovies() {
-    this.allMovieService.searchMovie(this.movie).subscribe(data => {
-      this.search_result = data['results'];
-    });
+    // this.allMovieService.searchMovie(this.movie).subscribe(data => {
+    //   this.search_result = data['results'];
+    // });
   }
 
   ngOnInit() {}

@@ -19,6 +19,11 @@ import { AllMovieDetailsComponent } from './all-movies/all-movie-details/all-mov
 import { PeopleComponent } from './people/people.component';
 import { PeopleService } from './people/people.service';
 import { PeopleDetailComponent } from './people/people-detail/people-detail.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon'
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +45,11 @@ import { PeopleDetailComponent } from './people/people-detail/people-detail.comp
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    
   ],
   providers: [AllMoviesService, MovieService, PeopleService],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <div>
 
-  <div class="container">
+  <!-- <div class="container">
     <form action="/action_page.php">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search" name="movie" [(ngModel)]="movie">
@@ -12,9 +12,17 @@
         </div>
       </div>
     </form>
-  </div>
+  </div> -->
 
 <div class="movies">
+  <!-- <form action="/action_page.php">
+    <div class="input-group">
+      <input type="text" class="form-control search-input" placeholder="Search" name="movie" [(ngModel)]="movie">
+      <div class="input-group-btn">
+        <button class="btn btn-default" style="border-radius: 0;" type="submit" (click)="searchMovies()"><i class="glyphicon glyphicon-search"></i></button>
+      </div>
+    </div>
+  </form> -->
   <div *ngFor="let movie of search_result; let i = index">
     <div *ngIf="i < 15">
       <div class="card mt-3 mb-3 movie">
