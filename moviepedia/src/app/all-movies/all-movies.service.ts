@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Subject } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,9 @@ export class AllMoviesService {
   private api_key = '4a7711ce4033e38e64bb7adb7c50cff2';
   private movie_string: any;
   movie: any;
+
+  private movieAnnouncedSource = new Subject<string>();
+  missionAnnounced$ = this.movieAnnouncedSource.asObservable();
 
   constructor(public _http: HttpClient) { }
 
@@ -23,7 +27,15 @@ export class AllMoviesService {
 
   searchMovie(movie: string) {
     this.movie_string = movie;
-    return this._http.get(this.movie_url + 'search/movie?query=' + this.movie_string + '&api_key=' + this.api_key);
+    this._http.get(this.movie_url + 'search/movie?query=' + this.movie_string + '&api_key=' + this.api_key)
+    .subscribe((res)=>
+    {
+      console.log(res);
+      this.movieAnnouncedSource.next(res['results']);
+    },(err)=>
+    {
+      console.log(err);
+    })
   }
 
   getMovie(id: number) {
