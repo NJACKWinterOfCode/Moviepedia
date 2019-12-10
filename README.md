@@ -12,11 +12,9 @@ List of movies their actor/actress
 ### How to Run Locally :
 1. Clone the Repository
      `git clone https://github.com/NJACKWinterOfCode/Moviepedia.git`
-2. cd into Moviepedia
-      `cd Moviepedia`
-3.  Install angular cli      
+2.  Install angular cli      
       ` npm install - g @angular/cli` 
-4. Start Local Server      
+3. Start Local Server      
       `ng serve -o --poll=2000`
 ### Contributing
  1. Fork the repository.
@@ -31,5 +29,6 @@ List of movies their actor/actress
 	`git push origin newbranch`
  6. Making a pull request
 ![image](https://user-images.githubusercontent.com/41269164/70219707-47194780-176b-11ea-96c2-d0c401ddb1e0.png)
-	* click on `Compare and Pull Request`
+	** click on `Compare and Pull Request`
 ![image](https://user-images.githubusercontent.com/41269164/70219836-8d6ea680-176b-11ea-81d5-549093bf0954.png)
+Project Setup Tutorial : [Click Here](https://www.youtube.com/watch?v=sLBGJk3Oq7k)👍 
